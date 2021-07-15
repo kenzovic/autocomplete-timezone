@@ -11,7 +11,7 @@
     <button class="btn-clear-timezone" mat-button *ngIf="myControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="myControl.setValue('')">
       <mat-icon>close</mat-icon>
     </button>
-    <mat-autocomplete #auto="matAutocomplete" [classList]="'list-time-zone'" [displayWith]="displayTimezone">
+    <mat-autocomplete #auto="matAutocomplete" [classList]="'list-time-zone'" [displayWith]="displayTimezone" [panelWidth]="485">
       <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
         {{option.display}}
       </mat-option>
