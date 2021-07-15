@@ -1,20 +1,20 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
+    <mat-label>Time zone</mat-label>
     <input type="text"
-           placeholder="Pick one"
+           placeholder="Type to search..."
            aria-label="Number"
            matInput
+           required
            [formControl]="myControl"
            [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
+    <button class="btn-clear-timezone" mat-button *ngIf="myControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="myControl.setValue('')">
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-autocomplete #auto="matAutocomplete" [classList]="'list-time-zone'" [displayWith]="displayTimezone">
       <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{option}}
+        {{option.display}}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
 </form>
-
-
-<!-- Copyright 2020 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->

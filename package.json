@@ -1,6 +1,11 @@
 {
-  "name": "material-aio-example",
-  "version": "0.0.0",
+  "name": "autocomplete-timezone",
+  "author": {
+    "name": "Nguyen Manh Tuan",
+    "email": "tuannm.cntt93@gmail.com",
+    "url": "https://tuannm.com"
+  },
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
